@@ -54,4 +54,4 @@ echo -e "\e[32mЗадачи в cron добавлены.\e[0m"
 
 # Инициализация с автовыходом
 echo "Выполните вход в аккаунт!"
-bin/telegram-cli -D -e 'quit'
+bin/telegram-cli -e 'quit'
