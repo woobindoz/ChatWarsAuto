@@ -11,5 +11,5 @@ if [[ $state = "forest" ]]
 	then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '🌲Лес'") | bin/telegram-cli -W -v -k tg-server.pub
 fi
 if [[ $state = "go" ]]
-	then bin/telegram-cli -W -v -k `pwd`/tg-server.pub -s scripts/action.lua
+	then bin/telegram-cli -W -v -k tg-server.pub -s scripts/action.lua
 fi
