@@ -1,7 +1,7 @@
 chatwarsbot = 'user#id265204902'
-admin1 = 'krasovskaya_sofia'
-admin2 = 'kraso'
-admin3 = 'nikolaev_vlad'
+admin1 = 'username1'
+admin2 = 'username2'
+admin3 = 'username3'
 
 function on_msg_receive (msg)
   if msg.out then
