@@ -39,11 +39,6 @@ echo "Начата сборка..."
 } &> /dev/null
 echo -e "\e[32mСборка завершена.\e[0m"
 
-# Инициализация с автовыходом
-echo "Выполните вход в аккаунт!"
-bash -c "bin/telegram-cli -D -e 'quit'"
-echo -e "\e[32mВход в аккаунт произведен.\e[0m"
-
 # Сохраняем текущие задачи
 echo "Добавление задач..."
 crontab -l > currentjobs
@@ -56,3 +51,7 @@ crontab currentjobs
 # Удаляем временный файл
 rm currentjobs
 echo -e "\e[32mЗадачи в cron добавлены.\e[0m"
+
+# Инициализация с автовыходом
+echo "Выполните вход в аккаунт!"
+bin/telegram-cli -D -e 'quit'
