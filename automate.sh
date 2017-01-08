@@ -1,5 +1,5 @@
 #!/bin/bash
-cd `pwd`
+cd /home/`whoami`/tg
 state="$1"
 if [[ $state = "defence" ]]
 	then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '🛡 Защита'") | bin/telegram-cli -W -v -k tg-server.pub
