@@ -45,7 +45,7 @@ crontab -l > currentjobs
 
 # Добавляем новые задачи
 echo "50 */3 * * * `pwd`/scripts/automate.sh defence" >> currentjobs
-echo "10/10 4-5 * * * `pwd`/scripts/automate.sh caravan" >> currentjobs
+echo "*/10 4-5 * * * `pwd`/scripts/automate.sh caravan" >> currentjobs
 crontab currentjobs
 
 # Удаляем временный файл
@@ -55,11 +55,11 @@ echo -e "\e[32mЗадачи в cron добавлены.\e[0m"
 # Создание systemd задачи
 echo "Создание systemd-демона..."
 {
-  sudo sh -c "sudo echo -e '[Unit]\nDescription=Telegram CLI daemon\nWants=network.target\nAfter=network.target\n\n[Install]\nWantedBy=default.target\n\n[Service]\nType=simple\nUser=$1\nExecStart=/home/$1/tg/bin/telegram-cli --wait-dialog-list -v --disable-auto-accept --disable-readline --disable-colors --rsa-key=/home/$1/tg/tg-server.pub --lua-script=/home/$1/tg/scripts/go.lua --logname=/var/log/telegramd.log --tcp-port=7313 --daemonize\nKillSignal=SIGKILL\nKillMode=process\nRestart=on-failure' > /etc/systemd/system/telegram.service"
+  sudo sh -c "sudo echo -e '[Unit]\nDescription=Telegram CLI daemon\nWants=network.target\nAfter=network.target\n\n[Install]\nWantedBy=default.target\n\n[Service]\nType=simple\nUser=`whoami`\nExecStart=/home/`whoami`/tg/bin/telegram-cli --wait-dialog-list -v --disable-auto-accept --disable-readline --disable-colors --rsa-key=/home/`whoami`/tg/tg-server.pub --lua-script=/home/`whoami`/tg/scripts/go.lua --logname=/var/log/telegramd.log --tcp-port=7313 --daemonize\nKillSignal=SIGKILL\nKillMode=process\nRestart=on-failure' > /etc/systemd/system/telegram.service"
   bash -c "sudo systemctl daemon-reload"
-  bash -c "sudo systemctl enable telegram"
   bash -c "sudo systemctl restart telegram"
   bash -c "sudo systemctl status telegram"
+  bash -c "sudo systemctl enable telegram"
 } &> /dev/null
 echo -e "\e[32msystemd-демон создан.\e[0m"
 
