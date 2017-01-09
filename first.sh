@@ -65,5 +65,4 @@ echo -e "\e[32msystemd-демон создан.\e[0m"
 
 # Инициализация с автовыходом
 echo "Выполните вход в аккаунт!"
-bin/telegram-cli -e 'quit'
-echo -e "\e[32mВход выполнен.\e[0m"
+bin/telegram-cli -D -e 'quit'
