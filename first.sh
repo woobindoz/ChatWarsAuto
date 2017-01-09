@@ -45,7 +45,7 @@ crontab -l > currentjobs
 
 # Добавляем новые задачи
 echo "50 */3 * * * `pwd`/scripts/automate.sh defence" >> currentjobs
-echo "*/10 4-5 * * * `pwd`/scripts/automate.sh caravan" >> currentjobs
+echo "10,20,30,40 4-6 * * * `pwd`/scripts/automate.sh caravan" >> currentjobs
 crontab currentjobs
 
 # Удаляем временный файл
