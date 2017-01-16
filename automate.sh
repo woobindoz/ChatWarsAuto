@@ -14,9 +14,7 @@ if [[ $state = "cave" ]]
 	then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '🕸Пещера'") | bin/telegram-cli -W -v -k tg-server.pub
 fi
 if [[ $state = "arena" ]]
-	then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '📯Арена'") | bin/telegram-cli -W -v -k tg-server.pub
-	sleep 5;
-	(sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '🔎Поиск соперника'") | bin/telegram-cli -W -v -k tg-server.pub
+	then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '🔎Поиск соперника'") | bin/telegram-cli -W -v -k tg-server.pub
 fi
 if [[ $state = "go" ]]
 	then bin/telegram-cli -W -v -k tg-server.pub -s scripts/go.lua
