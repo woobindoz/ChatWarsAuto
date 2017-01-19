@@ -19,6 +19,9 @@ fi
 if [[ $state = "go" ]]
 	then bin/telegram-cli -W -v -k tg-server.pub -s scripts/go.lua
 fi
-if [[ $state = "go+att" ]]
+if [[ $state = "go-att" ]]
 	then bin/telegram-cli -W -v -k tg-server.pub -s scripts/go+att.lua
+fi
+if [[ $state = "go-helper" ]]
+	then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '/go'") | bin/telegram-cli -W -v -k tg-server.pub
 fi
