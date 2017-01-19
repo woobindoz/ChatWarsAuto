@@ -9,7 +9,7 @@ function on_msg_receive (msg)
   end
 
   math.randomseed(os.time())
-  random_number = math.random(5,60)
+  random_number = math.random(5,25)
 
   if string.find(msg.text, '/attack_black') and (msg.from.username == admin1 or msg.from.username == admin2 or msg.from.username == admin3) then
     send_msg(chatwarsbot, '🇬🇵', ok_cb, false)
@@ -23,7 +23,7 @@ function on_msg_receive (msg)
 
   if string.find(msg.text, '/go') and msg.from.username == 'ChatWarsBot' then
     sleep(random_number)
-    send_msg(msg.from.id, '/go', ok_cb, false)
+    os.execute("`pwd`/tg/scripts/automate.sh go-helper")
   end
 end
 
