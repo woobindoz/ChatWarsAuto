@@ -4,7 +4,7 @@ function on_msg_receive (msg)
   end
 
   math.randomseed(os.time())
-  random_number = math.random(5,35)
+  random_number = math.random(5,10)
 
   if string.find(msg.text, '/go') and msg.from.username == 'ChatWarsBot' then
     sleep(random_number)
