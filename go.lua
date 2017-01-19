@@ -8,7 +8,7 @@ function on_msg_receive (msg)
 
   if string.find(msg.text, '/go') and msg.from.username == 'ChatWarsBot' then
     sleep(random_number)
-    send_msg(msg.from.id, '/go', ok_cb, false)
+    os.execute("`pwd`/tg/scripts/automate.sh go-helper")
   end
 end
 
