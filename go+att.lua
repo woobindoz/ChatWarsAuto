@@ -23,7 +23,7 @@ function on_msg_receive (msg)
 
   if string.find(msg.text, '/go') and msg.from.username == 'ChatWarsBot' then
     sleep(random_number)
-    os.execute("`pwd`/scripts/automate.sh go-helper")
+    os.execute("/home/`whoami`/tg/scripts/automate.sh go-helper")
   end
 end
 
