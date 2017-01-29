@@ -44,7 +44,7 @@ echo "Добавление задач..."
 crontab -l > currentjobs
 
 # Добавляем новые задачи
-echo "50 */3 * * * `pwd`/scripts/automate.sh defence" >> currentjobs
+echo "50 3,7,11,15,19,23 * * * `pwd`/scripts/automate.sh defence" >> currentjobs
 echo "25 */2 * * * `pwd`/scripts/automate.sh cave" >> currentjobs
 #echo "25 * * * * `pwd`/scripts/automate.sh forest" >> currentjobs
 #echo "10,20,30,40 4-6 * * * `pwd`/scripts/automate.sh caravan" >> currentjobs
