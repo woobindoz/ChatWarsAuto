@@ -8,16 +8,16 @@ if [[ $state = "defence" ]]
         (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '🇻🇦'") | bin/telegram-cli -W -v -k tg-server.pub
 fi
 if [[ $state = "caravan" ]]
-        then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 ' ГРАБИТЬ КОРОВАНЫ'") | bin/telegram-cli -W -v -k tg-server.pub
+	then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '🐫ГРАБИТЬ КОРОВАНЫ'") | bin/telegram-cli -W -v -k tg-server.pub
 fi
 if [[ $state = "forest" ]]
-        then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 ' Лес'") | bin/telegram-cli -W -v -k tg-server.pub
+	then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '🌲Лес'") | bin/telegram-cli -W -v -k tg-server.pub
 fi
 if [[ $state = "cave" ]]
-        then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 ' Пещера'") | bin/telegram-cli -W -v -k tg-server.pub
+	then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '🕸Пещера'") | bin/telegram-cli -W -v -k tg-server.pub
 fi
 if [[ $state = "arena" ]]
-        then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 ' Поиск соперника'") | bin/telegram-cli -W -v -k tg-server.pub
+	then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '🔎Поиск соперника'") | bin/telegram-cli -W -v -k tg-server.pub
 fi
 if [[ $state = "go" ]]
         then bin/telegram-cli -W -v -k tg-server.pub -s scripts/go.lua
