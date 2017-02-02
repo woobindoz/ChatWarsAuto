@@ -3,9 +3,9 @@ cd /home/`whoami`/tg
 state="$1"
 if [[ $state = "defence" ]]
         then
-        (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '  Защита'") | bin/telegram-cli -W -v -k tg-server.pub
+        (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '🛡 Защита'") | bin/telegram-cli -W -v -k tg-server.pub
 	sleep 120;
-        (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '  '") | bin/telegram-cli -W -v -k tg-server.pub
+        (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 '🇻🇦'") | bin/telegram-cli -W -v -k tg-server.pub
 fi
 if [[ $state = "caravan" ]]
         then (sleep 1; echo "contact_list"; sleep 1; echo "msg user#265204902 ' ГРАБИТЬ КОРОВАНЫ'") | bin/telegram-cli -W -v -k tg-server.pub
