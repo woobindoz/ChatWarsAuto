@@ -37,18 +37,18 @@
     end
 
 	--Кеша чирикнул "щит"
-	if string.find(msg.text, '🛡') and msg.from.username == 'ChatWarsStatBot' then
-		sleep(random_choice)
-        send_msg('user#id265204902', '🇻🇦', ok_cb, false)
-		return
-    end
+	--if string.find(msg.text, '🛡') and msg.from.username == 'ChatWarsStatBot' then
+	--	sleep(random_choice)
+    --    send_msg('user#id265204902', '🇻🇦', ok_cb, false)
+	--	return
+    --end
 
 	--пересылка флага от бота. Не всегда срабатывает
-	if (msg.text=='🛡 Защита' or msg.text=='🇪🇺' or msg.text=='🇬🇵' or msg.text=='🇮🇲' or msg.text=='🇨🇾' or msg.text=='🇻🇦') and msg.from.username == 'ChatWarsStatBot' then
-		sleep(random_choice)
-        send_msg('user#id265204902', msg.text, ok_cb, false)
-		return
-    end
+	--if (msg.text=='🛡 Защита' or msg.text=='🇪🇺' or msg.text=='🇬🇵' or msg.text=='🇮🇲' or msg.text=='🇨🇾' or msg.text=='🇻🇦') and msg.from.username == 'ChatWarsStatBot' then
+	--	sleep(random_choice)
+    --    send_msg('user#id265204902', msg.text, ok_cb, false)
+	--	return
+    --end
 
 end
 
