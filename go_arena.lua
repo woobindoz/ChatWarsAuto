@@ -2,7 +2,9 @@
     if msg.out then
         return
     end
-	
+	if msg.text==nil then
+		return
+	end
 	math.randomseed(os.time())
      
 	random_go = math.random(15,50)
@@ -73,4 +75,7 @@ function on_get_difference_end ()
 end
 
 function on_binlog_replay_end ()
+end
+
+function ok_cb() 
 end
